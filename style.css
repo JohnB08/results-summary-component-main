@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 736px;
+  height: 512px;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  box-shadow: 1em 1em 1em hsl(221, 100%, 96%);
+}
+.container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5em 2em;
+}
+#gradient {
+  padding: 3em;
+  border-radius: 2em;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.Resultheader {
+  font-weight: 500;
+  font-size: 1.4em;
+  color: hsl(241, 100%, 89%);
+}
+.Rateheader {
+  font-weight: 700;
+  font-size: 1.4em;
+  align-self: start;
+  margin-bottom: 0.5em;
+}
+.ratecontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 0.5em;
+}
+.title {
+  display: flex;
+  gap: 1em;
+}
+#rate1 {
+  background: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%);
+}
+#rate2 {
+  background: hsla(39, 100%, 56%, 0.1);
+  color: hsla(39, 100%, 56%, 1);
+}
+#rate3 {
+  background: hsla(166, 100%, 37%, 0.1);
+  color: hsla(166, 100%, 37%, 1);
+}
+#rate4 {
+  background: hsla(234, 85%, 45%, 0.1);
+  color: hsla(234, 85%, 45%, 1);
+}
+#rating {
+  color: #8f83ff;
+}
+#rating .ratescore {
+  color: black;
+  font-weight: bold;
+}
+.btn {
+  color: white;
+  background: hsl(224, 30%, 27%);
+  border: none;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 1em 0;
+  margin-top: 1.5em;
+  border-radius: 2em;
+}
+.btn:active {
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 1));
+}
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1em 0;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+.totalpoints {
+  margin: 2.5em auto;
+  color: #8f83ff;
+}
+.totalpoints .points {
+  display: block;
+  font-size: 4em;
+  font-weight: 800;
+  color: white;
+}
+.attribution {
+  margin-bottom: 2em;
+}
+.gratitude {
+  color: hsl(241, 100%, 89%);
+  text-align: center;
+}
+.gratitude .great {
+  display: block;
+  color: white;
+  font-size: 1.8em;
+  margin: 0.5em 0;
+  font-weight: 700;
+}
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+  .main {
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    box-shadow: none;
+  }
+  .container {
+    width: 100%;
+    height: 50%;
+  }
+  #gradient {
+    padding: 2em 3em;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .score {
+    width: 8em;
+    height: 8em;
+  }
+  .ratecontainer {
+    margin: 0.5em 0;
+  }
+}
