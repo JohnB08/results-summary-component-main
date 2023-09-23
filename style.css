@@ -3,16 +3,34 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+/* containers */
+body,
+.main,
+.container,
+.ratecontainer,
+.title,
+.score {
   display: flex;
+}
+body,
+.container,
+.score {
   flex-direction: column;
+}
+.main,
+.score {
+  justify-content: center;
+}
+.container,
+.score {
+  align-items: center;
+}
+body {
   height: 100vh;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 18px;
 }
 .main {
-  display: flex;
-  justify-content: center;
   margin: auto;
   width: 736px;
   height: 512px;
@@ -22,10 +40,7 @@ body {
 }
 .container {
   width: 50%;
-  display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
   padding: 1.5em 2em;
 }
 #gradient {
@@ -33,6 +48,9 @@ body {
   border-radius: 2em;
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
+/* container content */
+
+/* white bg container */
 .Resultheader {
   font-weight: 500;
   font-size: 1.4em;
@@ -45,14 +63,12 @@ body {
   margin-bottom: 0.5em;
 }
 .ratecontainer {
-  display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0.75em;
   border-radius: 0.5em;
 }
 .title {
-  display: flex;
   gap: 1em;
 }
 #rate1 {
@@ -92,11 +108,9 @@ body {
 .btn:active {
   background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 1));
 }
+
+/* purple bg container */
 .score {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   margin: 1em 0;
   width: 12em;
@@ -128,6 +142,8 @@ body {
   margin: 0.5em 0;
   font-weight: 700;
 }
+
+/* media queries */
 @media only screen and (max-width: 700px) {
   body {
     font-size: 16px;
@@ -143,9 +159,13 @@ body {
     height: 50%;
   }
   #gradient {
+    height: 40%;
     padding: 2em 3em;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+  }
+  #whitebg {
+    height: 60%;
   }
   .score {
     width: 8em;
